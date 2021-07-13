@@ -1,13 +1,9 @@
-
 class LandingPage
-  attr_accessor :loginTab,:txtUsername,:txtPassword,:btnLogin
+  attr_accessor :loginTab
 
   def initialize(browser)
     @browser = browser
       @loginTab = @browser.a(text: 'Log in')
-      @txtUsername = @browser.text_field(id: 'login-username')
-      @txtPassword = @browser.text_field(id: 'login-password')
-      @btnLogin = @browser.element(id: 'login-button')
   end
 
   def visit

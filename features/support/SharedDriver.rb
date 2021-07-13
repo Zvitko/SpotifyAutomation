@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 require 'rubygems'
 require 'rspec'
 require 'watir'
@@ -10,5 +12,5 @@ Selenium::WebDriver::Chrome::Service.driver_path = driver_path
 browser = Watir::Browser.new(:chrome)
 
 Before do
-    @browser = browser
+  @browser = browser
 end

@@ -1,10 +1,16 @@
+# frozen_string_literal: true
+
+require 'pry'
 
 class LoginPage
+  attr_accessor :txtUsername, :txtPassword, :btnLogin
 
-  def initialize
+  def initialize(browser)
+    @browser = browser
+    #binding.pry
     @txtUsername = @browser.text_field(id: 'login-username')
     @txtPassword = @browser.text_field(id: 'login-password')
-    @btnLogin = @browser.element(id: 'login-button')
+    @btnLogin = @browser.button(id: 'login-button')
   end
 
   def enterUsername(username)
