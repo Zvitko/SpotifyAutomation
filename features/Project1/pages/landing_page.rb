@@ -1,16 +1,16 @@
 class LandingPage
-  attr_accessor :loginTab
+  attr_accessor :landingLogin
 
   def initialize(browser)
     @browser = browser
-      @loginTab = @browser.a(text: 'Log in')
+    @landingLogin = @browser.a(text: 'Log in')
   end
 
-  def visit
+  def visitLandingPage
     @browser.goto 'https://www.spotify.com/us/'
   end
 
-  def clickLoginTab
-    @loginTab.click
+  def clickLandingLogin
+    @landingLogin.click
   end
 end
